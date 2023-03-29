@@ -1,0 +1,342 @@
+/* 사용할 폰트 */
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HS-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 태그이름을 통한 css디자인 */
+h1 {
+    font-size: 2.5rem;
+    font-family: 'HS-Regular';
+}
+section { 
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 클래스 이름을 통한 css디자인 */
+/* header의 nav */
+.header { 
+    position: fixed; 
+    background-color: #2D3192cc;
+    width: 100%;
+    color: white;
+    z-index: 100;
+}
+.header>.nav {
+    max-width:1000px;
+    /*태그 내의 padding값 때문에 1000px을 넘지 않기 위해
+    적용시키는 명령어*/
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+}
+.header>.nav>.nav-menu {
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+.header>.nav>.nav-menu a {
+    font-family: 'TAEBAEKmilkyway';
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.header>.nav>.nav-menu a::after {
+    content: "";
+    display: inline-block;
+    width: 0; height: 4px;
+    background-color: #FFFF08;
+    position: absolute;
+    bottom: 0;
+    margin-left: -74px;
+}
+.header>.nav>.nav-menu a:hover:after {
+    width: 80px;
+    transition: all 0.5s;
+}
+
+.header>.nav>.nav-menu a:hover {
+    color: #FFFF08;
+}
+
+
+.header>.nav>a>.nav-title {
+    width: 150px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'HS-Regular';
+}
+
+/*main*/
+/* 섹션부분을 찾기 힘들것같다면 메인에 두어도 상관없음 */
+.main { }
+
+/*section 단위로 접근*/
+.section1-wrap {
+    width: 100%;
+    min-height: 400px;
+    height: 100vh;
+    background-image: url(../img/rose-g8968e0cab_1920.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section1-wrap>.section1-title{
+    color: white;
+    text-align: right;
+    padding: 250px 20px 0 20px;
+    text-shadow: 0 0 5px black;
+    font-weight: bold;
+}
+.section1-wrap>.section1-title>h1{
+    font-size: 3rem;
+}
+.section1-wrap>.section1-title>h3 {
+    font-family: 'TAEBAEKmilkyway';
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* sention2 행사 설명*/
+.section2-intro {
+    text-align: center;
+    padding: 60px 0;
+    line-height: 120%;
+
+}
+.section2-intro>.intro-title,
+.section2-intro>.intro-title>h1
+{
+    margin-bottom: 20px;
+}
+.section2-intro>.intro-title>h3 {
+    font-family: 'TAEBAEKmilkyway';
+}
+
+.section2-intro>.intro-descript>table {
+    margin: auto;
+    margin-top: 50px;
+}
+
+.section2-intro>.intro-descript table tr td:first-child {
+    color: #2D3192;
+    padding: 5px 10px;
+    border-right: #2D3192 2px solid;
+    font-weight: bold;
+}
+.section2-intro>.intro-descript table tr td{
+    padding: 5px 10px;
+}
+
+/* section3 행사 이미지 */
+.section3-wrap {}
+.section3-wrap>.section3-gallery>.gallery-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.section3-gallery>.gallery-title>a {
+    background-color: #2D3192;
+    padding: 8px 12px;
+    border-radius: 15px;
+}
+.section3-gallery>.gallery-title>a:hover {
+    background-color: #EB5D99;
+    transition: all 0.2s;
+}
+
+.section3-gallery>.gallery-board-wrap{
+    max-width: 880px;
+    margin: auto;
+    display: flex;
+}
+
+.section3-gallery .gallery-board {
+    display: inline-block;
+    width: 280px;
+    height: 350px;
+    background-color: lightgray;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 10px;
+}
+.section3-gallery .gallery-board>h4 {
+    font-weight: bold;
+}
+.section3-gallery .gallery-board>.image-wrap {
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    overflow: hidden;
+}
+.section3-gallery .gallery-board:hover .image{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+/* section3 이미지 넣는 공간 */
+.section3-gallery>.gallery-board-wrap>.gallery-board:nth-child(2) .image {
+    width: 250px;
+    height: 250px;
+    /*나중에 수정하기 위함*/
+    background-image: url();
+}
+.section3-gallery>.gallery-board-wrap>.gallery-board:nth-child(3) .image {
+    width: 250px;
+    height: 250px;
+    /*나중에 수정하기 위함*/
+    background-image: url();
+}
+.section3-gallery>.gallery-board-wrap>.gallery-board:nth-child(1) .image {
+    width: 250px;
+    height: 250px;
+    /*나중에 수정하기 위함*/
+    background-image: url();
+}
+
+/*section4 행사뉴스*/
+.section4-news {
+    padding: 60px 0;
+    height: 350px;
+}
+.section4-news>table {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.section4-news>table tr td:first-child {
+    color: #2D3192;
+    font-weight: bolder; 
+    padding-right: 50px;
+}
+.section4-news>table tr td a{
+    color: black;
+}
+.section4-news>table tr:hover td,
+.section4-news>table tr:hover td a
+{
+    color: #EB5D99;
+}
+
+
+.section4-news>table tr td {
+    padding: 15px 0 ;
+    border-top: #2D3192 2px solid;
+    border-bottom: #2D3192 2px solid;
+}
+
+/* footer */
+.footer { 
+    background-color:rgb(241, 241, 241);
+    padding: 15px 0;
+}
+.footer>.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer>.footer-content>.footer-info>p {
+    float: left;
+    padding-right: 50px;
+    padding-bottom:10px ;
+    color: gray;
+    font-size: 0.8rem;
+}
+.footer>.footer-content>.footer-info>p:last-child {
+    padding: 0;
+    clear: both;
+}
+
+/* Top 버튼*/
+.top-button {
+    position: fixed;
+    bottom: 10px; right: 10px;
+    width: 80px; height: 80px;
+    background-color: #2D3192;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding-top: 30px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.top-button:hover {
+    background-color: #EB5D99;
+    transition: all 0.3s;
+}
+.top-button>a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* nav mobile 버튼 */
+.nav>.mobile-button{
+    background-image: url(../img/bars-solid.svg);
+    /*너무 크면 연속된 이미지를 보여준다. 적당히 적용.*/
+    width: 35px;
+    height: 40px;
+    /* 마우스를 올렸을 때 클릭해도 된다는
+    커서 모양으로 바꿔준다.*/
+    cursor: pointer;
+    /*PC사이즈에선 안 보이게*/
+    display: none;
+}
+
+/* 미디어쿼리 nav */
+@media screen and (max-width:767px) {
+    
+    .nav>.mobile-button{
+        display: inline-block;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+    .nav>.nav-menu{
+        /* flex된 태그들을 옆으로가 아니라 위아래로
+        나열시킨다.*/
+        flex-direction: column;
+        height: 60px;
+    }
+
+    .nav>.nav-menu>li{
+        display: none;
+    }
+    /*메뉴 바에 마우스를 올리고 그 뒤에 변한
+    네비게이션 메뉴가 마우스를 움직여도 지속된다.*/
+    .nav>.mobile-button:hover+.nav-menu,
+    .nav>.nav-menu:hover{
+        height: 100vh;
+        transition: all 0.5s;
+    }
+
+    .nav>.mobile-button:hover+.nav-menu>li,
+    .nav>.nav-menu:hover>li{
+        display: inline-block;
+    }
+    
+}
